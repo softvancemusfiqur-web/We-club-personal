@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 import app from "./app";
-import { connectToMongo } from "./db/mongo";
 import config from "./config";
 
 
