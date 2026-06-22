@@ -5,7 +5,20 @@ import sendResponse from "../../utility/sendResponse";
 const getAllUsers = async (req: Request, res: Response, next: NextFunction) => {
 
     try {
-        const users = await userService.getAllUsersFromDB();
+
+        const query = req.query;
+
+        const users = await userService.getAllUsersFromDB(query);
+
+        if(!users || users.length === 0) {
+            return sendResponse(res, {
+                statusCode : 404,   
+                success: false,
+                message : "No users found",
+                data : []
+            });
+        }
+
         sendResponse(res, {
             statusCode : 200,
             success: true,  
