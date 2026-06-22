@@ -18,7 +18,7 @@ const moduleRoutes: TModuleRoute[] = [
         route : userRoutes
     }, 
     // {
-    // another route loading
+    // another route loading here
     // }
 
 ];
