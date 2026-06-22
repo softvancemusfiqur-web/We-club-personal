@@ -2,7 +2,7 @@
 import { Types } from "mongoose";
 
 
-type Roles  = 'ADMIN' | 'ASSOCIATES' | 'PARTNERS' | 'USER';
+type Roles  = 'ADMIN' | 'ASSOCIATES' | 'PARTNERS' | 'USER' | "AMBASSADOR" | "MANAGER"  ;
 
 interface IUser {
     id: string;
